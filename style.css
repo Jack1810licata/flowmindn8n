@@ -1,4 +1,5 @@
 /* Fonts & Reset */
+html { scroll-behavior: smooth; }
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -39,7 +40,7 @@ header nav ul li a:hover { color: #00bcd4; }
 
 /* Home Section */
 .home-section { padding: 80px 0; background: linear-gradient(120deg,#0d47a1,#1976d2); color: white; text-align: center; }
-.home-container { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+.home-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px; }
 .home-text h2 { font-size: 2.2rem; margin-bottom: 10px; }
 .home-text p { font-size: 1.1rem; margin-bottom: 20px; }
 .video-placeholder { width: 300px; height: 200px; background-color: #ffffff33; display: flex; align-items: center; justify-content: center; border-radius: 12px; }
@@ -56,9 +57,7 @@ header nav ul li a:hover { color: #00bcd4; }
 .service-card .icon { font-size: 2rem; margin-bottom: 15px; }
 
 /* About Section */
-.about-section { padding: 80px 0; background-color: #e3f2fd; text-align: center; }
 .about-logo { width: 350px; margin-bottom: 20px;height: 180px; }
-.about-values { list-style: none; display: flex; justify-content: center; gap: 30px; padding: 0; }
 .logo{width:200px; margin-bottom:20px}
 /* Cases Section */
 .cases-section { padding: 80px 0; text-align: center; }
@@ -121,3 +120,33 @@ footer { background-color: #0d47a1; color: white; padding: 20px 0; text-align: c
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* Header layout (logo a sinistra, menu a destra) */
+.header-container { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 30px; }
+header .logo { margin: 0; }
+header nav ul { flex-wrap: wrap; }
+
+/* Le ancore non finiscono sotto l'header fisso */
+section[id] { scroll-margin-top: 80px; }
+
+/* Creator Section */
+.creator-section { background-color: white; }
+.creator-section .service-card { background-color: #f5f5f5; box-shadow: none; border: 1px solid #0d47a122; }
+.creator-section .service-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
+.creator-intro { max-width: 800px; margin: 40px auto 0; }
+.creator-intro h3 { font-family: 'Poppins', sans-serif; font-size: 1.6rem; margin: 0 0 4px; color: #0d47a1; }
+.creator-role { font-weight: 600; color: #1976d2; margin: 0 0 16px; }
+.creator-card { text-align: left; }
+.creator-card .icon { color: #0d47a1; }
+.creator-card h3 { margin-top: 0; color: #0d47a1; }
+.creator-card ul { list-style: none; padding: 0; margin: 12px 0 0; }
+.creator-card li { position: relative; padding: 6px 0 6px 22px; }
+.creator-card li::before { content: "▸"; position: absolute; left: 0; color: #00bcd4; }
+.creator-card a { color: #0d47a1; font-weight: 600; }
+.creator-goal { max-width: 800px; margin: 40px auto 0; }
+.creator-goal h3 { color: #0d47a1; }
+.creator-contacts { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; margin-top: 24px; font-weight: 600; }
+.creator-contacts a { color: #0d47a1; text-decoration: none; transition: 0.3s; }
+.creator-contacts a:hover { color: #00bcd4; }
+
+/* Benefits su mobile */
+@media(max-width: 768px){ .benefits { flex-direction: column; align-items: center; gap: 12px; } }

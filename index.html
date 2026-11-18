@@ -10,6 +10,18 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .creator-intro { max-width: 800px; margin: 0 auto 40px; text-align: center; }
+        .creator-intro h3 { margin-bottom: 4px; }
+        .creator-role { font-weight: 600; opacity: .8; margin-bottom: 16px; }
+        .creator-card ul { list-style: none; padding: 0; margin: 12px 0 0; text-align: left; }
+        .creator-card li { position: relative; padding: 6px 0 6px 22px; }
+        .creator-card li::before { content: "▸"; position: absolute; left: 0; }
+        .creator-card a { text-decoration: underline; }
+        .creator-goal { max-width: 800px; margin: 40px auto 0; text-align: center; }
+        .creator-contacts { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; margin-top: 24px; font-weight: 600; }
+        .creator-contacts a { color: inherit; text-decoration: none; }
+    </style>
 </head>
 
 <body>
@@ -21,6 +33,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Servizi</a></li>
                     <li><a href="#about">Chi Siamo</a></li>
+                    <li><a href="#creator">Il Creatore</a></li>
                     <li><a href="#cases">Casi Studio</a></li>
                     <li><a href="#contact">Contatti</a></li>
                 </ul>
@@ -34,8 +47,6 @@
                 <h2>Automazioni intelligenti per far crescere la tua azienda.</h2>
                 <p>FlowMind sviluppa soluzioni personalizzate per ottimizzare processi, gestire lead e automatizzare
                     comunicazioni.</p>
-                <a href="#contact" class="btn-primary btn-animate">Richiedi una demo gratuita e un video
-                    illustrativo</a>
             </div>
          
         </div>
@@ -90,6 +101,71 @@
                 <li>Trasparenza</li>
             </ul>
             <p>Strumenti utilizzati: n8n, AI, API</p>
+        </div>
+    </section>
+
+    <section id="creator" class="services-section creator-section">
+        <div class="container">
+            <h2 class="fade-in">Il creatore di FlowMind</h2>
+
+            <div class="creator-intro fade-in">
+                <h3>Giacomo Bruna</h3>
+                <p class="creator-role">Studente di Ingegneria Informatica al Politecnico di Milano</p>
+                <p>Mi occupo di sviluppare sistemi informatici per ottimizzare il lavoro di aziende e privati.
+                    Lavoro direttamente con ogni cliente, senza intermediari, con l’obiettivo di capire le sue
+                    esigenze reali e tradurle in una soluzione personalizzata. Rispetto alle grandi agenzie offro un
+                    servizio più personale, flessibile e accessibile, che va incontro alle richieste del cliente a
+                    un costo notevolmente minore.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card creator-card fade-in">
+                    <div class="icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Esperienze</h3>
+                    <ul>
+                        <li>Circa un mese in un’azienda informatica durante il percorso PCTO</li>
+                        <li>Diversi siti web e strumenti di automazione AI realizzati per attività locali</li>
+                        <li>Due progetti informatici di rilievo: DevBank e WebFinancial</li>
+                        <li><a href="https://github.com/GiacomoBrunaScuola?tab=repositories" target="_blank"
+                                rel="noopener">Tutto il mio portfolio su GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="service-card creator-card fade-in">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h3>Competenze principali</h3>
+                    <ul>
+                        <li>Sviluppo di siti e app web (frontend e backend)</li>
+                        <li>Linguaggi: Java, C#, HTML, CSS, JavaScript, PHP</li>
+                        <li>Progettazione di sistemi AI</li>
+                        <li>Conoscenze trasversali su tutti gli aspetti informatici</li>
+                    </ul>
+                </div>
+                <div class="service-card creator-card fade-in">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Cosa offro</h3>
+                    <ul>
+                        <li>Sistema automatico di gestione email attivo 24 ore su 24, 7 giorni su 7</li>
+                        <li>Soluzioni personalizzate sulle tue esigenze</li>
+                        <li>Strumenti come prenotazione appuntamenti, risposte automatiche generate dall’AI, notifica
+                            delle email importanti, eliminazione della pubblicità</li>
+                        <li>Prezzo molto competitivo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="creator-goal fade-in">
+                <h3>Il mio obiettivo</h3>
+                <p>Creare soluzioni digitali efficaci, moderne e facili da utilizzare, in linea con le esigenze del
+                    cliente e del mercato. Ottimizzare le attività locali con soluzioni basate su intelligenza
+                    artificiale che permettono di risparmiare tempo e risorse, restando al passo con l’evoluzione
+                    tecnologica.</p>
+                <p>Resto a disposizione per discutere nel dettaglio il tuo progetto e capire insieme come ottimizzare
+                    la tua esperienza lavorativa.</p>
+                <div class="creator-contacts">
+                    <a href="tel:+393294695119">📞 329 469 5119</a>
+                    <a href="mailto:giacomo.bruna18@gmail.com">✉️ giacomo.bruna18@gmail.com</a>
+                </div>
+            </div>
         </div>
     </section>
 

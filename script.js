@@ -1,36 +1,30 @@
-// Fade-in on scroll
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.3 };
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
-    entries.forEach(entry => {
-        if(!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        appearOnScroll.unobserve(entry.target);
-    });
-}, appearOptions);
-faders.forEach(fader => { appearOnScroll.observe(fader); });
+// Animazione fade-in allo scroll
+(function () {
+    var items = document.querySelectorAll('.fade-in');
+    if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('visible'); });
+        return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    items.forEach(function (el) { observer.observe(el); });
+})();
 
-// Contact form
-document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    alert("Grazie per averci contattato! Ti risponderemo al più presto.");
-    this.reset();
-});
-document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("appsModal");
-    const openBtn = document.getElementById("openAppsModal");
-    const closeBtn = document.getElementById("closeAppsModal");
-
-    openBtn.addEventListener("click", () => {
-        modal.style.display = "flex";
-    });
-
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    // Chiudi cliccando fuori dal box
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) modal.style.display = "none";
+// Menu e pulsanti: scorrimento fluido verso la sezione indicata
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+        var id = link.getAttribute('href');
+        if (id.length < 2) return;
+        var target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', id);
     });
 });
